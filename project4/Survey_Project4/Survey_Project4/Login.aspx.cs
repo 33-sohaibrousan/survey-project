@@ -231,7 +231,7 @@ namespace Survey_Project4
             }
             if(exist_in_arr == true)
             {
-                string[] user_info = File.ReadAllLines(@"C:\Users\dell\project4\Survey_Project4\Survey_Project4\Login.txt");
+                string[] user_info = File.ReadAllLines(@"C:\Users\dell\survey-project\project4\Survey_Project4\Survey_Project4\Login.txt");
                 for (int i = 0; i < user_info.Length; i++)
                 {
                     string[] user = user_info[i].Split(' ');

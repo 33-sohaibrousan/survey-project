@@ -61,7 +61,7 @@ namespace Survey_Project4
                 questions[8] = TextBox9.Text;
                 questions[9] = TextBox10.Text;
 
-                string path = "C:\\Users\\Orange\\source\\repos\\Survey_Project4\\Survey_Project4\\Lubna.txt";
+                string path = "C:\\Users\\dell\\survey-project\\project4\\Survey_Project4\\Survey_Project4\\Lubna.txt";
                 File.WriteAllLines(path, questions);
                 Label11.Text = "The Questions Added";
                 //TextBox1.Text = string.Empty;

@@ -24,8 +24,7 @@ namespace Survey_Project4
             Label1.Text = data[0];
 
 
-            Label2.Text = data[1];
-
+            Label2.Text = data[1];  
 
             Label3.Text = data[2];
 
@@ -42,7 +41,6 @@ namespace Survey_Project4
             Label9.Text = data[8];
 
             Label10.Text = data[9];
-
             //Label1.Text = data[0];
             //Label2.Text = data[1];
         }
@@ -51,6 +49,14 @@ namespace Survey_Project4
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+
+            string path33 = @"C:\Users\dell\project4\Survey_Project4\Survey_Project4\Lubna.txt";
+
+
+            string[] data = File.ReadAllLines(path33);
+            //string[] ques = { data[0], data[1], data[2], data[3], data[4], data[5], data[6], data[7], data[8], data[8], data[9] };
+
+
             string ans1 = Request.Form["answer1"];
             string ans2 = Request.Form["answer2"];
             string ans3 = Request.Form["answer3"];
@@ -61,7 +67,7 @@ namespace Survey_Project4
             string ans8 = Request.Form["answer8"];
             string ans9 = Request.Form["answer9"];
             string ans10 = Request.Form["answer10"];
-            string[] answers = { ans1, ans2, ans3, ans4, ans5, ans6, ans7, ans8, ans9, ans10 };
+            string[] answers = {ans1,  ans2, ans3, ans4,  ans5, ans6,  ans7, ans8, ans9,ans10 };
 
 
             if (ans1 != null && ans2 != null && ans3 != null && ans4 != null && ans5 != null && ans6 != null && ans7 != null && ans8 != null && ans9 != null && ans10 != null)
@@ -109,8 +115,8 @@ namespace Survey_Project4
             string path = z1[i] + localDate + ".txt";
             string path2 = localDate + ".txt";
 
-            string p = @"C:\Users\dell\project4\Survey_Project4\Survey_Project4\Login.txt";
-            string page = @"C:\Users\dell\project4\Survey_Project4\Survey_Project4\" + path;
+            string p = @"C:\Users\dell\survey-project\project4\Survey_Project4\Survey_Project4\Login.txt";
+            string page = @"C:\Users\dell\survey-project\project4\Survey_Project4\Survey_Project4\" + path;
 
             using (StreamWriter writee = File.AppendText(p))
             {
@@ -136,10 +142,19 @@ namespace Survey_Project4
 
             using (StreamWriter writee = File.AppendText(page))
             {
-                foreach( string answer in answers) { 
-                writee.WriteLine(answer);
+                
+                //    foreach (string qa in ques)
+                //{
+                //    writee.WriteLine(qa);
+                //}
+                //foreach ( string answer in answers) { 
+                //writee.WriteLine(answer);
+                //}
+               for (int i=0;i< answers.Length; i++)
+                {
+                    writee.WriteLine(data[i]);
+                    writee.WriteLine(answers[i]);
                 }
-               
                 
                 //writee.WriteLine(ans1);
                 //writee.WriteLine(ans2);

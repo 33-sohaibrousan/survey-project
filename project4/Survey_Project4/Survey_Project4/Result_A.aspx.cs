@@ -31,10 +31,11 @@ namespace Survey_Project4
                 string[] usersum1 = readsum[0].Split(' ');
                 row11.Text = usersum1[0];//name
                 row12.Text = usersum1[1];//ID
+                string p = usersum1[0] + usersum1[2] + ".txt";
                 HyperLink link1 = new HyperLink();
-                HyperLink3.Text = usersum1[0];
-                string p = usersum1[0] + usersum1[2]+".txt";
+                HyperLink3.Text =p;
                 HyperLink3.NavigateUrl = p;
+                
             }
 
             else if (readsum.Length == 2)
@@ -46,6 +47,7 @@ namespace Survey_Project4
                 HyperLink3.Text = usersum1[0];
                 string p = usersum1[0] + usersum1[2] + ".txt";
                 HyperLink3.NavigateUrl = p;
+
 
 
 
@@ -484,7 +486,7 @@ namespace Survey_Project4
             //row101.Text = usersum10[0];
             //row102.Text = usersum10[1];
 
-
+            new 
         }
 
         protected void Button1_Click(object sender, EventArgs e)
